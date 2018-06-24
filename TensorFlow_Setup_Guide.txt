@@ -1,0 +1,61 @@
+
+cd ~/
+cd tensorflow/
+source ./bin/activate
+(tensorflow) xxx
+
+
+Exit 
+deactivate
+
+
+
+
+
+
+Installing with Virtualenv
+--------------------------
+
+1.Start a terminal (a shell). You'll perform all subsequent steps in this shell.
+ $ cd ~/
+
+2.Install pip and Virtualenv by issuing the following commands:
+ $ sudo easy_install pip
+ $ pip install --upgrade virtualenv 
+
+3.Create a Virtualenv environment by issuing a command of one of the following formats:
+ $ virtualenv --system-site-packages tensorflow # for Python 2.7
+ $ virtualenv --system-site-packages -p python3 tensorflow_python3 # for Python 3.n
+
+4.Activate the Virtualenv environment by issuing one of the following commands:
+ $ cd tensorflow
+ $ source ./bin/activate      # If using bash, sh, ksh, or zsh
+ $ source ./bin/activate.csh  # If using csh or tcsh 
+
+5.The preceding source command should change your prompt to the following:
+ (targetDirectory)$ 
+
+6.Ensure pip ≥8.1 is installed:
+ (targetDirectory)$ easy_install -U pip
+
+7.Issue one of the following commands to install TensorFlow and all the packages that TensorFlow requires into the active Virtualenv environment:
+ (targetDirectory)$ pip install --upgrade tensorflow      # for Python 2.7
+ (targetDirectory)$ pip3 install --upgrade tensorflow     # for Python 3.n
+
+8.Optional. If Step 6 failed (typically because you invoked a pip version lower than 8.1), install TensorFlow in the active Virtualenv environment by issuing a command of the following format:
+
+ $ pip install --upgrade tfBinaryURL   # Python 2.7
+ $ pip3 install --upgrade tfBinaryURL  # Python 3.n 
+  Python 2.7
+  https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py2-none-any.whl
+  Python 3.4, 3.5, or 3.6
+  https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py3-none-any.whl
+
+
+Uninstalling TensorFlow
+-----------------------
+If you want to uninstall TensorFlow, simply remove the tree you created. For example:
+ $ rm -r ~/tensorflow
+
+
+
